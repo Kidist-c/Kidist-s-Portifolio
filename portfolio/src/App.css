@@ -1,0 +1,15 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+/* Alternating section backgrounds for visual rhythm */
+#about { background: var(--bg-primary); }
+#skills { background: var(--bg-secondary); }
+#experience { background: var(--bg-primary); }
+#projects { background: var(--bg-secondary); }
+#education { background: var(--bg-primary); }
+#contact { background: var(--bg-secondary); }

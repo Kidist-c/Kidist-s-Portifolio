@@ -1,0 +1,118 @@
+.skills__filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 32px;
+  margin-bottom: 48px;
+}
+
+.skills__filter-btn {
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-subtle);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-family: var(--font-body);
+}
+.skills__filter-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+}
+.skills__filter-btn--active {
+  background: rgba(0, 212, 255, 0.1);
+  color: var(--accent-primary);
+  border-color: var(--border-accent);
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.skills__group {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  transition: border-color var(--transition-base);
+}
+.skills__group:hover { border-color: var(--border-accent); }
+
+.skills__group-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.skills__group-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cat-color, var(--accent-primary));
+  flex-shrink: 0;
+}
+
+.skills__group-name {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--cat-color, var(--accent-primary));
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skills__group-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Skill Bar */
+.skill-bar { display: flex; flex-direction: column; gap: 6px; }
+
+.skill-bar__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-bar__name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-bar__level {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.skill-bar__track {
+  height: 5px;
+  border-radius: 100px;
+  background: var(--border-subtle);
+  overflow: hidden;
+}
+
+.skill-bar__fill {
+  height: 100%;
+  border-radius: 100px;
+  background: var(--skill-color, var(--accent-primary));
+  position: relative;
+  overflow: hidden;
+}
+.skill-bar__fill::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.25) 50%, transparent 100%);
+  animation: shimmer 2s infinite;
+  background-size: 200% 100%;
+}
