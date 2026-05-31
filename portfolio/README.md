@@ -4,14 +4,14 @@ Production-quality personal portfolio built with **React 19 + TypeScript** (stri
 
 ## 🚀 Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | React 19 + TypeScript (strict) |
-| Build Tool | Vite 6 |
-| Animations | Framer Motion |
-| Icons | Lucide React |
-| Styling | CSS Custom Properties (no CSS-in-JS) |
-| Deployment | GitHub Pages (via GitHub Actions) |
+| Layer      | Technology                           |
+| ---------- | ------------------------------------ |
+| Framework  | React 19 + TypeScript (strict)       |
+| Build Tool | Vite 6                               |
+| Animations | Framer Motion                        |
+| Icons      | Lucide React                         |
+| Styling    | CSS Custom Properties (no CSS-in-JS) |
+| Deployment | GitHub Pages (via GitHub Actions)    |
 
 ## 📁 Project Structure
 
@@ -79,33 +79,3 @@ npm run preview
 ```
 
 ## 🌐 Deploy to GitHub Pages
-
-### One-time Setup
-
-1. Push this repo to GitHub as `<your-username>/<your-username>.github.io` (or any repo name)
-2. Go to **Settings → Pages → Source** and select **GitHub Actions**
-3. Push to `main` — the workflow in `.github/workflows/deploy.yml` handles everything
-
-### Manual Deploy
-
-```bash
-npm run build
-# Then push the dist/ folder to gh-pages branch, or use the Actions workflow
-```
-
-### Custom Domain (optional)
-
-Add a `CNAME` file in `/public/` with your domain:
-```
-kidistmulualem.dev
-```
-
-## ✏️ Customisation Guide
-
-All content lives in **`src/data/portfolioData.ts`** — update your name, bio, skills, experiences, projects, and education there. No other files need to change for content updates.
-
-To update the theme colours, edit the CSS custom properties in `src/index.css` under `:root` (dark) and `[data-theme='light']`.
-
-## 📄 License
-
-MIT — feel free to use this as a template for your own portfolio.
