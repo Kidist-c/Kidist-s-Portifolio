@@ -10,6 +10,7 @@ import { personalInfo } from '../../data/portfolioData';
 import { SocialLink } from '../../types';
 import './Hero.css';
 
+
 const iconMap: Record<SocialLink['platform'], React.ReactNode> = {
   github: <GitFork size={20} />,
   linkedin: <Briefcase size={20} />,
@@ -137,10 +138,13 @@ export const Hero: React.FC = () => {
             <div className="hero__avatar">
   {personalInfo.avatarUrl ? (
     <img
-      src={personalInfo.avatarUrl}
-      alt="Kidist Mulualem"
-      className="hero__avatar-img"
-    />
+  src={personalInfo.avatarUrl}
+  alt="Kidist Mulualem"
+  className="hero__avatar-img"
+  onError={(e) => {
+    e.currentTarget.style.display = 'none';
+  }}
+/>
   ) : (
     <span className="hero__avatar-initials">KM</span>
   )}
